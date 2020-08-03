@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Promote</string>
+    <string name="loginName">用户名 :</string>
+    <string name="login_pwd">密   码 :</string>
+    <string name="edit_username">请输入用户名</string>
+    <string name="edit_pwd">请输入密码</string>
+    <string name="btn_login">登   录</string>
+    <string name="btn_regist">注   册</string>
+    <string name="regist_name">用户名</string>
+    <string name="regist_pwd">密 　 码</string>
+    <string name="regist_edit_pwd">请输入密码</string>
+    <string name="regist_edit_name">请输入想注册的用户名</string>
+    <string name="regist_yx">邮 　 箱</string>
+    <string name="regist_edit_yx">请输入邮箱信息</string>
+    <string name="btn_regist_submit">注册</string>
+</resources>

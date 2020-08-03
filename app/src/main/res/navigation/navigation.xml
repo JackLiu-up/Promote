@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.jackliu.promote.controller.fragment.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/makeMoneyFragment"
+        android:name="com.jackliu.promote.controller.fragment.MakeMoneyFragment"
+        android:label="make_money_fragment"
+        tools:layout="@layout/make_money_fragment" />
+    <fragment
+        android:id="@+id/tryPlayFragment"
+        android:name="com.jackliu.promote.controller.fragment.TryPlayFragment"
+        android:label="try_play_fragment"
+        tools:layout="@layout/try_play_fragment" />
+    <fragment
+        android:id="@+id/mineFragment"
+        android:name="com.jackliu.promote.controller.fragment.MineFragment"
+        android:label="mine_fragment"
+        tools:layout="@layout/mine_fragment" />
+</navigation>
