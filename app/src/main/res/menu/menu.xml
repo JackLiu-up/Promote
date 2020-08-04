@@ -3,14 +3,18 @@
 
     <item
         android:id="@+id/HomeFragment"
+        android:icon="@drawable/ic_baseline_home_24"
         android:title="首页" />
     <item
         android:id="@+id/MakeMoneyFragment"
+        android:icon="@drawable/ic_baseline_attach_money_24"
         android:title="赚钱" />
     <item
         android:id="@+id/TryPlayFragment"
+        android:icon="@drawable/ic_baseline_videogame_asset_24"
         android:title="试玩" />
     <item
         android:id="@+id/MineFragment"
+        android:icon="@drawable/ic_mine"
         android:title="我的" />
 </menu>

@@ -57,10 +57,10 @@
         android:hint="@string/regist_edit_name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="165dp" />
+        app:layout_constraintVertical_bias=".43"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/regist_yx"
