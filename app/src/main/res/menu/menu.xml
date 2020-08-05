@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="首页" />
+    <item
+        android:id="@+id/makeMoneyFragment"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="赚钱" />
+    <item
+        android:id="@+id/tryPlayFragment"
+        android:icon="@drawable/ic_baseline_videogame_asset_24"
+        android:title="试玩" />
+    <item
+        android:id="@+id/mineFragment"
+        android:icon="@drawable/ic_mine"
+        android:title="我的" />
+</menu>
