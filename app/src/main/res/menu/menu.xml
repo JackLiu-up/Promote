@@ -4,17 +4,21 @@
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="首页" />
+        android:title="@string/home" />
     <item
         android:id="@+id/makeMoneyFragment"
         android:icon="@drawable/ic_baseline_attach_money_24"
-        android:title="赚钱" />
+        android:title="@string/task_fragment" />
+    <item
+        android:id="@+id/teamFragment"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="@string/team_fragment" />
     <item
         android:id="@+id/tryPlayFragment"
         android:icon="@drawable/ic_baseline_videogame_asset_24"
-        android:title="试玩" />
+        android:title="@string/game_fragment" />
     <item
         android:id="@+id/mineFragment"
         android:icon="@drawable/ic_mine"
-        android:title="我的" />
+        android:title="@string/mine_fragmen" />
 </menu>
