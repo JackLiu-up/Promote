@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.forlost.sunflower.R;
 import java.util.List;
 
-
+/**
+ * 首页的消息列表适配器
+ */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.myviewholder> {
     private List<String> list;
     private Context context;

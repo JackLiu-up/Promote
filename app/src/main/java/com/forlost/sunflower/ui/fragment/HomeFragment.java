@@ -47,10 +47,10 @@ public class HomeFragment extends Fragment {
     private HomeViewModel contentViewModel;
     private View contentView;
     private ViewPagerAdapter adapter;
-    private ScheduledExecutorService scheduledExecutorService;
     private ViewPager viewPager;
     private List<ImageView> images;
     private List<View> dots;
+    private ScheduledExecutorService scheduledExecutorService;
     private int currentItem;
     //记录上一次点的位置
     private int oldPosition = 0;
@@ -63,6 +63,7 @@ public class HomeFragment extends Fragment {
             R.drawable.image8,
             R.drawable.image9
     };
+
     private RecyclerView recyclerView;
     private List<String> list;
     private Context context;
