@@ -12,11 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:layout_marginTop="25dp"
-        android:background="@android:color/holo_blue_light"
+        android:background="@drawable/team"
         android:gravity="center"
         android:text="邀请奖励广告"
         android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -24,8 +23,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:background="@drawable/team">
+        android:layout_marginTop="180dp">
 
         <TextView
             android:id="@+id/textView3"
@@ -43,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:text="师傅昵称"
-            android:textColor="@color/black"
+            android:gravity="center"
             android:textSize="18sp" />
 
         <TextView

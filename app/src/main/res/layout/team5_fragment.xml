@@ -6,10 +6,10 @@
     tools:context=".ui.fragment.Team5Fragment">
 
     <TextView
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:gravity="center"
+        android:text="客服页"
+        android:textSize="20sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
