@@ -31,6 +31,7 @@ import javax.net.ssl.X509TrustManager;
 import static com.forlost.zhongtuo.conf.Config.DTD_API_HTTP_URL;
 
 public class DtdHttpHelper {
+    private static final String TAG="DtdHttpHelper";
     private OkHttpClient okHttpClient;
     private static DtdHttpHelper instance;
     private Gson gson = new Gson();
@@ -166,15 +167,15 @@ public class DtdHttpHelper {
     /**
      * 获取邮箱验证码
      *
-     * @param code
+     * @param
      * @param dtdHttpCallback
      */
-    public void getEmailCodeForReg(String code, final DtdHttpCallback<Void> dtdHttpCallback) {
+    public void getEmailCodeForReg(String email, final DtdHttpCallback<Void> dtdHttpCallback) {
         Headers headers = new Headers.Builder().add("User-Agent", USER_AGENT).build();
         FormBody formBody = new FormBody.Builder()
                 .add("grant_type", "password")
                 .add("client_id", Config.DTD_API_CLIENT_ID)
-                .add("code", code)
+                .add("email", email)
                 .build();
         Request request = new Request.Builder()
                 .url(DTD_API_HTTP_URL + "pub.user/getEmailcode")
@@ -195,6 +196,7 @@ public class DtdHttpHelper {
                     return;
                 }
                 String resStr = responseBody.string();
+                Log.e(TAG,resStr);
                 DtdBaseResponseModel dtdBaseResponseModel = gson.fromJson(resStr, DtdBaseResponseModel.class);
                 if (dtdBaseResponseModel.getCode() != 1) {
                     doFailure(dtdHttpCallback, dtdBaseResponseModel.getMsg());

@@ -8,11 +8,11 @@
     tools:context="activity.RegistActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/regist"
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:text="@string/btn_regist_submit"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,27 +20,31 @@
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
     <EditText
-        android:background="@drawable/regist_text_view"
         android:id="@+id/regist_pwd"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
+        android:background="@drawable/regist_text_view"
+        android:gravity="center"
         android:hint="@string/regist_edit_pwd"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline30"
+        app:layout_constraintTop_toTopOf="@+id/guideline31"
         tools:ignore="DuplicateIds,MissingConstraints" />
 
     <EditText
-        android:background="@drawable/regist_text_view"
         android:id="@+id/regist_nickname"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:autofillHints=""
+        android:background="@drawable/regist_text_view"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/regist_edit_name"
         android:inputType="textPersonName"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,32 +54,34 @@
 
 
     <EditText
-        android:background="@drawable/regist_text_view"
         android:id="@+id/EmailAddress"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
+        android:background="@drawable/regist_text_view"
+        android:gravity="center"
+        android:hint="@string/regist_edit_yx"
         android:inputType="textEmailAddress"
-        android:text="@string/regist_edit_yx"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline28"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.541" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".45" />
+        app:layout_constraintGuide_percent=".35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".35" />
+        app:layout_constraintGuide_percent=".25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline30"
@@ -93,17 +99,36 @@
 
     <TextView
         android:id="@+id/email_code"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:background="@drawable/regist_text_view"
-        android:text="请输入邮箱验证码"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/email_code"
-        app:layout_constraintBottom_toTopOf="@+id/guideline31"
+        android:background="@drawable/regist_text_view"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="点击获取邮箱验证码"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline31" />
+        app:layout_constraintTop_toTopOf="@+id/guideline30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".45" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/regist_text_view"
+         android:gravity="center"
+        android:hint="请输入邮箱验证码"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
