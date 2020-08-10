@@ -156,7 +156,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="今日收益（元）"
+        android:text="今日收益"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
@@ -167,7 +167,7 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="累计收益（元）"
+        android:text="累计收益"
         android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
@@ -189,7 +189,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5741"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
@@ -217,8 +216,8 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:background="@drawable/text_view_shape"
         android:gravity="center"
         android:text="广告位"
@@ -339,7 +338,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintStart_toStartOf="@+id/guideline20"
         app:layout_constraintTop_toTopOf="@+id/guideline14"
-        app:layout_constraintVertical_bias="0.077"
+        app:layout_constraintVertical_bias="0.072"
         app:tabTextAppearance="@style/TabLayoutTextStyle">
 
         <com.google.android.material.tabs.TabItem
@@ -367,6 +366,14 @@
             android:layout_height="wrap_content"
             android:text="客服" />
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/teamvewpager"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_tab" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

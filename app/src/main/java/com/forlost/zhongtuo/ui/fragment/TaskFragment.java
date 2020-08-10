@@ -39,7 +39,6 @@ public class TaskFragment extends Fragment {
         contextView = inflater.inflate(R.layout.task_fragment, container, false);
         tabLayout = contextView.findViewById(R.id.tabLayout);
         viewpager = contextView.findViewById(R.id.taskViewPager);
-        FloatingActionButton fab=contextView.findViewById(R.id.fab);
         return contextView;
     }
 
