@@ -6,8 +6,11 @@
     tools:context=".ui.fragment.GameFragment">
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="游戏" />
+        android:textSize="40sp"
+        android:gravity="center"
+        android:text="敬请期待" />
 
 </FrameLayout>

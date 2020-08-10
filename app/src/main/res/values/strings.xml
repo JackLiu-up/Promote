@@ -14,11 +14,11 @@
     <string name="edit_pwd">请输入密码</string>
     <string name="btn_login">登   录</string>
     <string name="btn_regist">注   册</string>
-    <string name="regist_name">用户名</string>
-    <string name="regist_pwd">密 　 码</string>
+    <string name="regist_name">昵 称</string>
+    <string name="regist_pwd">密  码</string>
     <string name="regist_edit_pwd">请输入密码</string>
-    <string name="regist_edit_name">请输入想注册的用户名</string>
-    <string name="regist_yx">邮 　 箱</string>
+    <string name="regist_edit_name">请输入昵称</string>
+    <string name="regist_yx">邮  箱</string>
     <string name="regist_edit_yx">请输入邮箱信息</string>
     <string name="btn_regist_submit">注册</string>
 
@@ -28,4 +28,5 @@
     <string name="sign_text">签到</string>
     <string name="task_text1">自由港</string>
     <string name="task_text2">众拓港</string>
+    <string name="email_code">获取邮箱验证码</string>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.chat.MessageListActivity">
 
-    <com.forlost.sunflower.ui.chat.MessageListView
+    <com.forlost.zhongtuo.ui.chat.MessageListView
         android:id="@+id/messagesList"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -38,7 +38,7 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/messagesList"-->
 <!--        app:layout_constraintVertical_bias="1.0"-->
 <!--        />-->
-    <com.forlost.sunflower.ui.chat.MessageInput
+    <com.forlost.zhongtuo.ui.chat.MessageInput
         android:id="@+id/messageInput"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
