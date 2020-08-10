@@ -23,7 +23,6 @@ public class LoginActivity extends MyBaseActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.getSupportActionBar().hide();
-
         initView();
 
         btn_login.setOnClickListener(this);
@@ -51,7 +50,7 @@ public class LoginActivity extends MyBaseActivity implements View.OnClickListene
             @Override
             public void onFailure(final String msg) {
                 super.onFailure(msg);
-                Toast.makeText(LoginActivity.this, "登陆失败 :"+msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
     }
