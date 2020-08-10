@@ -20,9 +20,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.forlost.zhongtuo.R;
 import com.forlost.zhongtuo.adapter.RecyclerViewAdapter;
+import com.forlost.zhongtuo.adapter.HomeAdapter;
+import com.forlost.zhongtuo.bean.Task;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -37,7 +41,7 @@ public class HomeFragment extends Fragment {
      */
 
     private HomeViewModel contentViewModel;
-    private View contentView;
+    private View contentView;//定义view用来设置fragment的layout
     private ViewPagerAdapter adapter;
     private ViewPager viewPager;
     private List<ImageView> images;
@@ -56,11 +60,16 @@ public class HomeFragment extends Fragment {
             R.drawable.image9
     };
 
-    private RecyclerView recyclerView;
-    private List<String> list;
-    private Context context;
-    private RecyclerViewAdapter recyclerViewAdapter;
+    //private RecyclerView recyclerView;
+    //private List<String> list;
+    //private Context context;
+    //private RecyclerViewAdapter recyclerViewAdapter;
 
+    private RecyclerView homeRecyclerView;
+    //定义实体类对象的数据集合
+    private ArrayList<Task> taskList = new ArrayList<Task>();
+    //自定义任务列表recyclerview的适配器
+    private HomeAdapter readapter;
     SimpleAdapter simpleAdapter;
 
     public static HomeFragment newInstance() {
@@ -71,16 +80,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         contentView = inflater.inflate(R.layout.home_fragment, container, false);
-        context = contentView.getContext();
-        recyclerView = contentView.findViewById(R.id.recyclerview);
-        list = new ArrayList<String>();
+     //   context = contentView.getContext();
+        initRecyclerView();
         initData();
-        LinearLayoutManager manager = new LinearLayoutManager(context);
-        manager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerViewAdapter = new RecyclerViewAdapter(context, list);
-        recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerView.setLayoutManager(manager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));//添加下划线
+        //模拟数据
+//        initData();
+//        list = new ArrayList<String>();
+//        initData();
+//        LinearLayoutManager manager = new LinearLayoutManager(context);
+//        manager.setOrientation(LinearLayoutManager.VERTICAL);
+//        recyclerViewAdapter = new RecyclerViewAdapter(context, list);
+//        recyclerView.setAdapter(recyclerViewAdapter);
+//        recyclerView.setLayoutManager(manager);
+//        recyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));//添加下划线
 
         setView();//顶部轮播图广告，打开注释会闪退
 
@@ -88,29 +100,68 @@ public class HomeFragment extends Fragment {
     }
 
     /**
-     * 列表数据
+     * 模拟数据
      */
     private void initData() {
-        list.add("好消息！8月8日有5例确诊患者、3例无症状感染者出院");
-        list.add("美国罗斯福号航母三名选手确诊");
-        list.add("缅甸首次出现新冠肺炎病例");
-        list.add("韩国抗议措施收到成效");
-        list.add("西班牙死亡人数创新高");
-        list.add("古巴限制外国游客进入");
-        list.add("意大利死亡人数已达全球最高");
-        list.add("美国关闭边境以限制非必要的出行");
-        list.add("各国采取更严厉的措施应对新冠病毒");
-        list.add("新冠病毒引发经济危机");
-        list.add("新冠病毒肆虐欧洲各国");
-        list.add("欧洲多国封锁边境");
-        list.add("意大利死亡人数已达全球最高");
-        list.add("美国关闭边境以限制非必要的出行");
-        list.add("各国采取更严厉的措施应对新冠病毒");
-        list.add("新冠病毒引发经济危机");
-        list.add("新冠病毒肆虐欧洲各国");
-        list.add("欧洲多国封锁边境");
-        list.add("意大利死亡人数已达全球最高");
+        for (int i = 0; i < 6; i++) {
+            Task task = new Task();
+            task.setMoney(0.5 + i);
+            task.setLevel("初级");
+            task.setTitle("自定义标题");
+            task.setType("砍价");
+            task.setElseCount(100 - (20 + i));
+            task.setFinishCount(20 + i);
+            taskList.add(task);
+        }
     }
+
+    /**
+     * 对recyclerview进行配置
+     */
+    private void initRecyclerView() {
+        //获取recycelerview
+        homeRecyclerView = contentView.findViewById(R.id.revcyclerhome);
+        //创建adapter
+        readapter = new HomeAdapter(getActivity(),taskList);
+        //给recyclerview设置adapter
+        homeRecyclerView.setAdapter(readapter);
+        //参数是：上下文、列表方向（横向还是纵向）、是否倒叙
+        homeRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        //设置item的分割线
+        homeRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
+        //RecyclerView中没有item的监听事件，需要自己在适配器中写一个监听事件的接口。参数根据自定义
+        readapter.setOnItemClickListener(new HomeAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(View view, Task data) {
+                //此处进行监听事件的业务处理
+                Toast.makeText(getActivity(), "我是item", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    /**
+     * 列表数据
+     */
+//    private void initData() {
+//        list.add("好消息！8月8日有5例确诊患者、3例无症状感染者出院");
+//        list.add("美国罗斯福号航母三名选手确诊");
+//        list.add("缅甸首次出现新冠肺炎病例");
+//        list.add("韩国抗议措施收到成效");
+//        list.add("西班牙死亡人数创新高");
+//        list.add("古巴限制外国游客进入");
+//        list.add("意大利死亡人数已达全球最高");
+//        list.add("美国关闭边境以限制非必要的出行");
+//        list.add("各国采取更严厉的措施应对新冠病毒");
+//        list.add("新冠病毒引发经济危机");
+//        list.add("新冠病毒肆虐欧洲各国");
+//        list.add("欧洲多国封锁边境");
+//        list.add("意大利死亡人数已达全球最高");
+//        list.add("美国关闭边境以限制非必要的出行");
+//        list.add("各国采取更严厉的措施应对新冠病毒");
+//        list.add("新冠病毒引发经济危机");
+//        list.add("新冠病毒肆虐欧洲各国");
+//        list.add("欧洲多国封锁边境");
+//        list.add("意大利死亡人数已达全球最高");
+//    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
