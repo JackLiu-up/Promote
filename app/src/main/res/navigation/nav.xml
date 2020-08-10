@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.forlost.sunflower.ui.fragment.HomeFragment"
+        android:name="com.forlost.zhongtuo.ui.fragment.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.forlost.sunflower.ui.fragment.TaskFragment"
+        android:name="com.forlost.zhongtuo.ui.fragment.TaskFragment"
         android:label="@string/title_task"
         tools:layout="@layout/task_fragment" />
     <fragment
         android:id="@+id/teamFragment"
-        android:name="com.forlost.sunflower.ui.fragment.TeamFragment"
+        android:name="com.forlost.zhongtuo.ui.fragment.TeamFragment"
         android:label="@string/title_team"
         tools:layout="@layout/team_fragment" />
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.forlost.sunflower.ui.fragment.GameFragment"
+        android:name="com.forlost.zhongtuo.ui.fragment.GameFragment"
         android:label="@string/title_game"
         tools:layout="@layout/game_fragment" />
     <fragment
         android:id="@+id/mineFragment"
-        android:name="com.forlost.sunflower.ui.fragment.MineFragment"
+        android:name="com.forlost.zhongtuo.ui.fragment.MineFragment"
         android:label="@string/title_home"
         tools:layout="@layout/mine_fragment" />
 </navigation>
