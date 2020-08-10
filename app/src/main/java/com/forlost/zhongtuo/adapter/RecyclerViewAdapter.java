@@ -13,7 +13,7 @@ import com.forlost.zhongtuo.R;
 import java.util.List;
 
 /**
- * 首页的消息列表适配器
+ * 首页的消息列表适配器，显示单条数据
  */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.myviewholder> {
     private List<String> list;
