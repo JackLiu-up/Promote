@@ -14,8 +14,12 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.forlost.sunflower.R;
+import com.forlost.sunflower.bean.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -38,11 +42,11 @@ public class TaskFragment extends Fragment {
         contextView = inflater.inflate(R.layout.task_fragment, container, false);
         tabLayout = contextView.findViewById(R.id.tabLayout);
         viewpager = contextView.findViewById(R.id.taskViewPager);
+        FloatingActionButton fab=contextView.findViewById(R.id.fab);
         return contextView;
     }
 
     @Override
-
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
