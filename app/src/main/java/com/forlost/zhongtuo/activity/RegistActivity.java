@@ -97,8 +97,6 @@ public class RegistActivity extends MyBaseActivity {
                 Toast.makeText(RegistActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    ;
+    };
 
 }
