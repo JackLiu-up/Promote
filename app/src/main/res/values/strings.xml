@@ -8,6 +8,8 @@
     <string name="title_game">游戏</string>
     <string name="title_mine">我的</string>
 
+    <string name="key"><u>content</u></string>
+
     <string name="loginName">用户名 :</string>
     <string name="login_pwd">密   码 :</string>
     <string name="edit_username">请输入用户名</string>
