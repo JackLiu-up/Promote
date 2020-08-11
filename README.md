@@ -14,3 +14,4 @@
 ![](https://github.com/JasonRobit/Promote/blob/Zhongtuo1.0/screenshots/Snipaste_2020-08-11_12-30-04.png?raw=true)
 
 ### 5.我的页面优化
+![](https://github.com/JasonRobit/Promote/blob/Zhongtuo1.0/screenshots/snipe304.jpg?raw=true)
