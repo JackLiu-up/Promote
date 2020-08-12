@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.forlost.zhongtuo.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -31,7 +32,7 @@ public class TaskFragment extends Fragment {
     String[] temp = {"自由港", "众拓港"};
 
     //悬浮按钮
-    private Button fab;
+    private ImageButton fab;
 
     public static TaskFragment newInstance() {
         return new TaskFragment();
