@@ -32,6 +32,7 @@ public class MyBaseActivity extends AppCompatActivity implements EasyPermissions
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       //沉浸式状态栏，适配刘海屏
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
